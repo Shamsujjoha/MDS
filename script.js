@@ -1,8 +1,8 @@
 function countTouches(event) {
-  //var x = event.touches[0].screenX;
+  var x = event.touches[0].screenX;
   var myElement=document.getElementById("fname");
   var position = getPosition(myElement);
-  myElement.value="x co-ord=" + position.x + "y co-ord=" + position.y ;
+  myElement.value="(" + position.x + "," + position.y + ")"+ "("+x+")" ;
 
 
 }
