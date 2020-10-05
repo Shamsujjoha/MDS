@@ -1,4 +1,35 @@
 function countTouches(event) {
-  var x = event.touches[0].screenX;
-  document.getElementById("lname").value = x;
+  //var x = event.touches[0].screenX;
+  var myElement=document.getElementById("fname");
+  var position = getPosition(myElement);
+  myElement.value="x co-ord=" + position.x + "y co-ord=" + position.y ;
+
+
+}
+
+function getPosition(el) {
+  var xPos = 0;
+  var yPos = 0;
+ 
+  while (el) {
+    if (el.tagName == "BODY") {
+      // deal with browser quirks with body/window/document and page scroll
+      var xScroll = el.scrollLeft || document.documentElement.scrollLeft;
+      var yScroll = el.scrollTop || document.documentElement.scrollTop;
+ 
+      xPos += (el.offsetLeft - xScroll + el.clientLeft);
+      yPos += (el.offsetTop - yScroll + el.clientTop);
+    } else {
+      // for all other non-BODY elements
+      xPos += (el.offsetLeft - el.scrollLeft + el.clientLeft);
+      yPos += (el.offsetTop - el.scrollTop + el.clientTop);
+    }
+ 
+    el = el.offsetParent;
+  }
+  return {
+    x: xPos,
+    y: yPos
+  };
+
 }
