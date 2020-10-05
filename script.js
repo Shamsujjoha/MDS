@@ -1,4 +1,4 @@
 function countTouches(event) {
   var x = event.touches[0].screenX;
-  document.getElementById("demo").innerHTML = x;
+  document.getElementById("fname").innerHTML = x;
 }
