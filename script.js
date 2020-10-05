@@ -2,7 +2,10 @@ function countTouches(event) {
   var x = event.touches[0].screenX;
   var myElement=document.getElementById("fname");
   var position = getPosition(myElement);
-  myElement.value="(" + position.x + "," + position.y + ")"+ "("+x+")" ;
+  var pos_x=position.x + myElement.clientWidth/2;
+  var pos_y=position.y + myElement.clientHeight/2;
+
+  myElement.value="(" + pos_x + "," + pos_y + ")"+ "("+x+")" ;
 
 
 }
