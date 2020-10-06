@@ -4,10 +4,9 @@ function countTouches(event) {
   var x = event.touches[0].clientX;
   var y = event.touches[0].clientY;
 
-  var myElement=document.getElementById("fname");
-  myElement.value=y;
+ 
 
- /* var tName = ["fname","mname","lname"];
+  var tName = ["fname","mname","lname"];
   var i,dis,idx;
   var minDis=10000000000.00;
   var myElement;
@@ -46,7 +45,7 @@ function countTouches(event) {
      //myElement.value="(" + pos_x + "," + pos_y + ")"+ "("+x+")" ;
   
      myElement.value= "closest textbox to touchpoint";
-*/
+
 
 
 }
