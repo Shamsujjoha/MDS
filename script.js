@@ -10,6 +10,7 @@ function countTouches(event) {
   for(i=0;i<3;i++){
 
      myElement=document.getElementById(tName[i]);
+     myElement.value="";
      var position = getPosition(myElement);
      var pos_x=position.x + myElement.clientWidth/2;
      var pos_y=position.y + myElement.clientHeight/2;
