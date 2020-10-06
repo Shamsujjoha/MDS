@@ -1,12 +1,36 @@
 function countTouches(event) {
   var x = event.touches[0].screenX;
-  var myElement=document.getElementById("fname");
-  var position = getPosition(myElement);
-  var pos_x=position.x + myElement.clientWidth/2;
-  var pos_y=position.y + myElement.clientHeight/2;
+  var y = event.touches[0].screenY;
 
-  myElement.value="(" + pos_x + "," + pos_y + ")"+ "("+x+")" ;
+  var tName = ["fname","mname","lname"];
+  var i,dis,idx;
+  var minDis=-1;
 
+  for(i=0;i<3;i++){
+
+     var myElement=document.getElementById(tName[i]);
+     var position = getPosition(myElement);
+     var pos_x=position.x + myElement.clientWidth/2;
+     var pos_y=position.y + myElement.clientHeight/2;
+
+      dis= Math.sqrt( ((x-pos_x)*(x-pos_x)) + ((y-pos_y)*(y-pos_y)) );
+      if(dis<minDis){
+        minDis=dis;
+        idx=i;
+      }
+
+
+  }
+
+  //var myElement=document.getElementById("fname");
+ // var position = getPosition(myElement);
+ // var pos_x=position.x + myElement.clientWidth/2;
+ // var pos_y=position.y + myElement.clientHeight/2;
+  
+  myElement=document.getElementById(tName[idx]);
+  //myElement.value="(" + pos_x + "," + pos_y + ")"+ "("+x+")" ;
+  
+  myElement.value=("I'm selected");
 
 }
 
