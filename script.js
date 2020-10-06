@@ -21,9 +21,9 @@ function countTouches(event) {
      pos_x=position.x + (myElement.clientWidth/2);
      pos_y=position.y + (myElement.clientHeight/2);
 
-      //dis= Math.sqrt( ((x-pos_x)*(x-pos_x)) + ((y-pos_y)*(y-pos_y)) );
-       dis=(y-pos_y);
-       if(dis<0)dis=dis*-1;
+      dis= Math.sqrt( ((x-pos_x)*(x-pos_x)) + ((y-pos_y)*(y-pos_y)) );
+       //dis=(y-pos_y);
+       //if(dis<0)dis=dis*-1;
 
       if(dis<minDis){
         minDis=dis;
