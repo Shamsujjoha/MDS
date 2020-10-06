@@ -42,7 +42,7 @@ function countTouches(event) {
      pos_y=position.y + (myElement.clientHeight/2);
      //myElement.value="(" + pos_x + "," + pos_y + ")"+ "("+x+")" ;
   
-     myElement.value= pos_y +" -  "+y;
+     myElement.value= "I'm closest from your touchpoint";
 
 }
 
