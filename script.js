@@ -1,6 +1,8 @@
 function countTouches(event) {
-  var x = event.touches[0].screenX;
-  var y = event.touches[0].screenY;
+  //var x = event.touches[0].screenX;
+  //var y = event.touches[0].screenY;
+  var x = event.touches[0].clientX;
+  var y = event.touches[0].clientY;
 
   var tName = ["fname","mname","lname"];
   var i,dis,idx;
