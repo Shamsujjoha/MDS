@@ -4,7 +4,7 @@ function countTouches(event) {
 
   var tName = ["fname","mname","lname"];
   var i,dis,idx;
-  var minDis=100000;
+  var minDis=100000000.00;
   var myElement;
 
   for(i=0;i<3;i++){
