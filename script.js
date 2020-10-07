@@ -3,7 +3,7 @@ function countTouches(event) {
 
 
 
-	event.preventDefault();
+	
 
   //var x = event.touches[0].screenX;
   //var y = event.touches[0].screenY;
@@ -17,6 +17,15 @@ function countTouches(event) {
   var minDis=10000000000.00;
   var myElement;
   var position, pos_x, pos_y;
+
+	for(i=0;i<3;i++){
+		myElement=document.getElementById(tName[i]);
+		if(myElement.value!="")
+			return;
+
+	}
+
+	event.preventDefault();
 
   for(i=0;i<3;i++){
 
