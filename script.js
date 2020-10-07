@@ -1,7 +1,7 @@
 
 function countTouches(event) {
 
-
+event.preventDefault();
 
 	
 
@@ -18,14 +18,9 @@ function countTouches(event) {
   var myElement;
   var position, pos_x, pos_y;
 
-	/*for(i=0;i<3;i++){
-		myElement=document.getElementById(tName[i]);
-		if(myElement.value!="")
-			return;
+	
 
-	}*/
-
-	event.preventDefault();
+	
 
   for(i=0;i<3;i++){
 
