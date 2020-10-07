@@ -20,7 +20,7 @@ function countTouches(event) {
   for(i=0;i<3;i++){
 
      myElement=document.getElementById(tName[i]);
-     myElement.value="";
+     //myElement.value="";
     //myElement.readOnly=true; 
      position = getPosition(myElement);
      //position = myElement.getBoundingClientRect(); 
