@@ -1,7 +1,6 @@
 
 function countTouches(event) {
 
-event.preventDefault();
 
 	
 
@@ -17,10 +16,6 @@ event.preventDefault();
   var minDis=10000000000.00;
   var myElement;
   var position, pos_x, pos_y;
-
-	
-
-	
 
   for(i=0;i<3;i++){
 
@@ -60,7 +55,8 @@ event.preventDefault();
     // myElement.value= "closest textbox to touchpoint";
    //myElement.readOnly=false; 
    myElement.focus(); 
-   
+   event.preventDefault();
+
    // myElement.scrollIntoView();
 
 
