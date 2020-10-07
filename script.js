@@ -62,10 +62,7 @@ function countTouches(event) {
 }
 
 
-function startWriting(event){
 
-candidate.focus();
-}
 
 
 
