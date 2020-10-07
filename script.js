@@ -1,6 +1,6 @@
 function countTouches(event) {
 
-/*
+
   //var x = event.touches[0].screenX;
   //var y = event.touches[0].screenY;
   var x = event.touches[0].clientX;
@@ -52,7 +52,7 @@ function countTouches(event) {
     myElement.focus();
     myElement.scrollIntoView();
 
-*/
+
 
 }
 
