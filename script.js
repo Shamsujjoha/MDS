@@ -19,6 +19,7 @@ function countTouches(event) {
 
      myElement=document.getElementById(tName[i]);
      myElement.value="";
+     myElement.blur(); 
      position = getPosition(myElement);
      //position = myElement.getBoundingClientRect(); 
      pos_x=position.x + (myElement.clientWidth/2);
@@ -50,7 +51,7 @@ function countTouches(event) {
 
 
     // myElement.value= "closest textbox to touchpoint";
-   myElement.blur(); 
+   
    myElement.focus(); 
    
    // myElement.scrollIntoView();
