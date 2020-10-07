@@ -1,4 +1,6 @@
 function countTouches(event) {
+
+/*
   //var x = event.touches[0].screenX;
   //var y = event.touches[0].screenY;
   var x = event.touches[0].clientX;
@@ -50,9 +52,68 @@ function countTouches(event) {
     myElement.focus();
     myElement.scrollIntoView();
 
+*/
+
+}
+
+
+function startWriting(event){
+ var x = event.touches[0].clientX;
+  var y = event.touches[0].clientY;
+
+ 
+
+  var tName = ["fname","mname","lname"];
+  var i,dis,idx;
+  var minDis=10000000000.00;
+  var myElement;
+  var position, pos_x, pos_y;
+
+  for(i=0;i<3;i++){
+
+     myElement=document.getElementById(tName[i]);
+     myElement.value="";
+     position = getPosition(myElement);
+     //position = myElement.getBoundingClientRect(); 
+     pos_x=position.x + (myElement.clientWidth/2);
+     pos_y=position.y + (myElement.clientHeight/2);
+
+      dis= Math.sqrt( ((x-pos_x)*(x-pos_x)) + ((y-pos_y)*(y-pos_y)) );
+       //dis=(y-pos_y);
+       //if(dis<0)dis=dis*-1;
+
+      if(dis<minDis){
+        minDis=dis;
+        idx=i;
+      }
+
+
+  }
+
+  //var myElement=document.getElementById("fname");
+ // var position = getPosition(myElement);
+ // var pos_x=position.x + myElement.clientWidth/2;
+ // var pos_y=position.y + myElement.clientHeight/2;
+  
+     myElement=document.getElementById(tName[idx]);
+     position = getPosition(myElement);
+     pos_x=position.x + (myElement.clientWidth/2);
+     pos_y=position.y + (myElement.clientHeight/2);
+     //myElement.value="(" + pos_x + "," + pos_y + ")"+ "("+x+")" ;
+  
+
+
+    // myElement.value= "closest textbox to touchpoint";
+    myElement.focus();
+    //myElement.scrollIntoView();
+
 
 
 }
+
+
+
+
 
 function getPosition(el) {
   var xPos = 0;
