@@ -52,7 +52,7 @@ function countTouches(event) {
 
     // myElement.value= "closest textbox to touchpoint";
    
-   myElement.focus( {preventScroll:ture} ); 
+   myElement.focus(); 
    // myElement.scrollIntoView();
 
 
