@@ -12,7 +12,7 @@ function countTouches(event) {
 	
 if(hasScrolled){
 	hasScrolled=false;
-	return false;
+	return true;
 }
 
 
