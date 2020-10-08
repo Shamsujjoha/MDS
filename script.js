@@ -10,12 +10,12 @@ window.onscroll = function (e)
 
 function countTouches(event) {
 
-var touches = evtent.changedTouches;
+/*var touches = evtent.changedTouches;
 	
 if(touches.length>1){
 	//hasScrolled=false;
 	return true;
-}
+}*/
 
 
   //var x = event.touches[0].screenX;
@@ -69,6 +69,7 @@ if(touches.length>1){
     // myElement.value= "closest textbox to touchpoint";
    //myElement.readOnly=false; 
    myElement.focus(); 
+   myElement.scrollIntoView();
    event.preventDefault();
 
    // myElement.scrollIntoView();
