@@ -1,8 +1,19 @@
+var hasScrolled=false;
+window.onscroll = function (e)
+{
+    hasScrolled= true;
+}
+
 
 function countTouches(event) {
 
 
 	
+if(hasScrolled){
+	hasScrolled=false;
+	return false;
+}
+
 
   //var x = event.touches[0].screenX;
   //var y = event.touches[0].screenY;
