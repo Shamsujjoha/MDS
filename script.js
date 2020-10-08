@@ -69,7 +69,7 @@ if(touches.length>1){
     // myElement.value= "closest textbox to touchpoint";
    //myElement.readOnly=false; 
    myElement.focus(); 
-   myElement.scrollIntoView();
+   //myElement.scrollIntoView();
    event.preventDefault();
 
    // myElement.scrollIntoView();
