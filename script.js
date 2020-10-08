@@ -1,7 +1,7 @@
 var hasScrolled=false;
 window.onscroll = function (e)
 {
-    document.getElementById("fname")="scroll";
+    document.getElementById("fname").value="scroll";
     hasScrolled= true;
 }
 
