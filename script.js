@@ -1,17 +1,19 @@
-var hasScrolled=false;
+/*var hasScrolled=false;
 window.onscroll = function (e)
 {
     document.getElementById("fname").value="scroll";
     hasScrolled= true;
 }
 
+*/
+
 
 function countTouches(event) {
 
-
+var touches = evtent.changedTouches;
 	
-if(hasScrolled){
-	hasScrolled=false;
+if(touches.length>){
+	//hasScrolled=false;
 	return true;
 }
 
