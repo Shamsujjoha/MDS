@@ -12,7 +12,7 @@ function countTouches(event) {
 
 var touches = evtent.changedTouches;
 	
-if(touches.length>){
+if(touches.length>1){
 	//hasScrolled=false;
 	return true;
 }
